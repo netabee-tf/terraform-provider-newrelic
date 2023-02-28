@@ -79,7 +79,7 @@ func TestAccNewRelicOneDashboard_CrossAccountQueries(t *testing.T) {
 		Steps: []resource.TestStep{
 			// Test: Create
 			{
-				Config: testAccCheckNewRelicOneDashboardConfig_TwoPageBasic(rName, "1"), // Hard-coded accountID for NRQL queries
+				Config: testAccCheckNewRelicOneDashboardConfig_TwoPageBasic(rName, "3814156"), // Hard-coded accountID for NRQL queries
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckNewRelicOneDashboardExists("newrelic_one_dashboard.bar", 0),
 				),
@@ -484,7 +484,7 @@ func testAccCheckNewRelicOneDashboardConfig_OnePageFull(dashboardName string, ac
 	return `
 resource "newrelic_one_dashboard" "bar" {
   name = "` + dashboardName + `"
-  permissions = "private"
+  permissions = "public_read_write"
 
 ` + testAccCheckNewRelicOneDashboardConfig_PageFull(dashboardName, accountID) + `
 }`
@@ -619,7 +619,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFull(pageName string, accountID 
       nrql_query {
         query      = "FROM Transaction SELECT count(*) FACET name"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
 	}
 
     widget_billboard {
@@ -699,7 +699,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFull(pageName string, accountID 
       nrql_query {
         query      = "FROM Transaction SELECT count(*) FACET name"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
     }
 
     widget_log_table {
@@ -718,7 +718,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFull(pageName string, accountID 
       nrql_query {
         query      = "FROM Transaction SELECT average(duration) FACET appName"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
     }
 
     widget_json {
@@ -844,7 +844,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFullChanged(pageName string, acc
       nrql_query {
         query      = "FROM Transaction SELECT count(*) FACET name LIMIT 10"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
 	}
 
     widget_billboard {
@@ -924,7 +924,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFullChanged(pageName string, acc
       nrql_query {
         query      = "FROM Transaction SELECT count(*) FACET name LIMIT 10"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
     }
 
     widget_table {
@@ -934,7 +934,7 @@ func testAccCheckNewRelicOneDashboardConfig_PageFullChanged(pageName string, acc
       nrql_query {
         query      = "FROM Transaction SELECT average(duration) FACET appName LIMIT 10"
       }
-      linked_entity_guids = ["MjUyMDUyOHxWSVp8REFTSEJPQVJEfDE2NDYzMDQ"]
+      linked_entity_guids = ["MzgwNjUyNnxWSVp8REFTSEJPQVJEfGRhOjI5Mjk0MjA"]
     }
 
     widget_log_table {
