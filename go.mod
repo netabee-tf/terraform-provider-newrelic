@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.26.1
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/newrelic/go-agent/v3 v3.20.3
+	github.com/newrelic/go-agent/v3 v3.25.1
 	github.com/newrelic/go-insights v1.0.3
 	github.com/newrelic/newrelic-client-go/v2 v2.21.1
 	github.com/stretchr/testify v1.8.2
@@ -13,10 +13,11 @@ require (
 
 require (
 	github.com/agext/levenshtein v1.2.2 // indirect
+	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
@@ -40,6 +41,7 @@ require (
 	github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734 // indirect
 	github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
+	github.com/klauspost/compress v1.16.3 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
@@ -51,6 +53,8 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
+	github.com/valyala/bytebufferpool v1.0.0 // indirect
+	github.com/valyala/fasthttp v1.49.0 // indirect
 	github.com/valyala/fastjson v1.6.3 // indirect
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
 	github.com/vmihailenco/msgpack/v4 v4.3.12 // indirect
@@ -61,9 +65,9 @@ require (
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
-	google.golang.org/appengine v1.6.6 // indirect
-	google.golang.org/genproto v0.0.0-20200904004341-0bd0a958aa1d // indirect
-	google.golang.org/grpc v1.51.0 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
+	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
+	google.golang.org/grpc v1.54.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
